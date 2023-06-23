@@ -1,0 +1,150 @@
+Javascript                                        Name: T.Jaivignesh
+                                                   
+Code                                              3rd year EEE                 
+
+//
+const details ={
+    address:{
+        street:'second street',
+        city:'tirupur',
+    }
+}
+console.log(details.address.city);
+console.log(details.name);
+
+//?(Optional operator)
+const jai={
+    city:'tirupur'
+}
+console.log(jai.address?.city);
+//looping
+//FOR-IN loop
+for(const key in details) {
+    console.log(key,details[key]);
+}
+
+//function
+//syntax
+//function function_name(variable_name1,variable_name2)
+//{
+    //return num1+num2;
+//}
+//calling a function
+//console.log(function_name(variable1,variable2))
+function sum(num1,num2){
+    if(typeof num1 !== 'number' || typeof num2 !== 'number')
+    {
+        return "Invalid";
+    }
+    return num1+num2;
+}
+console.log(sum('hi',40));
+console.log(sum(10,20));
+
+(function the (num1,num2){
+    if(typeof num1 !=='number'|| typeof num2 !== 'number'){
+        console.log('Invalid number');
+    }
+    console.log(num1+num2);
+})(10,50);
+
+//passing afunction into a function is called higher order function
+
+const sub =(num1,num2) => num1-num2;
+const mom =(num1,num2) => num1+num2;
+
+const calculator =(num1,num2,operation) => {
+    return operation(num1,num2);
+}
+console.log(calculator(100,20,sub));
+console.log(calculator(100,20,mom));
+
+//trim function and replace replaceAll
+let str3 = " I am a sweet boy";
+let str4 = str3.trim();
+console.log(str4.replaceAll('e','o'));
+
+//Arrays
+
+var arr =[1,2,3,4,'hello'];
+console.log(arr);
+//push
+arr.push(10);
+console.log(arr.pop(1));
+console.log(arr);
+//
+let arr5 = [
+    1,
+    undefined,
+    true,
+    null,
+    "123",
+    '4',
+    [6,25,2,3,4,5],
+    (num1)=>num1*5,
+    {a:1,b:2,c:3,say_hello:()=>"hello"}
+];
+//console.log(arr5[8].say_hello());
+for(key in arr5[8]){
+    console.log(key,arr5[8][key]);
+}
+//spice (it is destrutive)
+let arr6 =[1,2,3,4,5];
+arr6.splice(5,0,6,7,8,9,10);
+console.log(arr6);
+arr6.splice(1,4,6,7,8,9,10); //here
+console.log(arr6);
+
+//adding elements in the first position
+console.log(arr6.unshift(1,2,3));
+console.log(arr6);
+//deleting first position in array
+console.log(arr6.shift(0,3));
+
+//slice(it is a non destrutive)
+var arr7=['sam','nayan','narzi','farzi'];
+console.log(arr7.slice(0,3));
+
+//split vs join
+let str8="samantha ruth prabhu";
+let str9=str8.split('');
+console.log(str9);
+//
+let str10=[1,2,3,4,"sri","eshwar","college"];
+console.log(str10.join(""));
+
+//charAt()function
+console.log(str8.charAt(5));
+
+
+OUTPUT:
+
+tirupur
+script.js:9 undefined
+script.js:15 undefined
+script.js:19 address {street: 'second street', city: 'tirupur'}
+script.js:37 Invalid
+script.js:38 30
+script.js:44 60
+script.js:55 80
+script.js:56 120
+script.js:61 I am a swoot boy
+script.js:66 (5) [1, 2, 3, 4, 'hello']
+script.js:69 10
+script.js:70 (5) [1, 2, 3, 4, 'hello']
+script.js:85 a 1
+script.js:85 b 2
+script.js:85 c 3
+script.js:85 say_hello ()=>"hello"
+script.js:90 (10) [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+script.js:92 (11) [1, 6, 7, 8, 9, 10, 6, 7, 8, 9, 10]
+script.js:95 14
+script.js:96 (14) [1, 2, 3, 1, 6, 7, 8, 9, 10, 6, 7, 8, 9, 10]
+script.js:98 1
+script.js:102 (3) ['sam', 'nayan', 'narzi']
+script.js:107 (20) ['s', 'a', 'm', 'a', 'n', 't', 'h', 'a', ' ', 'r', 'u', 't', 'h', ' ', 'p', 'r', 'a', 'b', 'h', 'u']
+script.js:110 1234srieshwarcollege
+script.js:113 t
+
+
+

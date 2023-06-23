@@ -1,0 +1,128 @@
+Javascript                               NAME: T.Jaivignesh
+ Code                                        3rd year EEE
+
+let b ='sece';
+const name = 'jaga';
+
+var x=100;
+{
+      var x=20
+      console.log(x);
+}
+console.log(x);
+
+var n=1/0;
+console.log(n);
+var n='hello/0';
+console.log(n);
+var n='10'/0;
+console.log(n);
+
+//string x int
+var x='hello'*8;
+console.log(n);
+
+var n='10'/2;
+console.log(n);
+
+//bigint
+let c=10n;
+console.log(c,typeof c);
+//integer
+let d=10;
+console.log(typeof(d));
+
+//concatenation
+var e=190;
+var f=20;
+console.log('addition of two numbers',e,'and',f,'is',e+f);
+
+//backtick operator
+console.log(`addition of two numbers ${e} and ${f} is ${e+f}`);
+
+//string concatenation
+let str1='Robert';
+let str2='Downey';
+console.log("string concatenation:",str1+str2);
+
+//undefined (it is not defined)
+var xtr;
+console.log(xtr);
+//nulltype (null is empty)
+let obj=null;
+console.log(obj);
+
+//task
+const bool=true;
+console.log(sece);
+var sece='college';
+//
+var sece='college';
+console.log(sece);
+//symbol
+//object
+const user={
+      name:'jaga',
+      age: 20,
+      identification:'positivity'
+};
+console.log(user);
+
+//inserting values
+user.profession='Director';
+console.log(user);
+
+//changing the value
+user.age=21;
+console.log(user);
+
+//delete the value
+delete user.age;
+console.log(user);
+
+//object freeze
+const clean=Object.freeze({
+      name:'jaga',
+      age:21
+});
+clean.school='svmhss';
+console.log(clean);
+
+//printing the key only
+console.log(Object.keys(user));
+
+//mutation
+const userx ={
+      name: 'jaga',
+      age: 21
+}
+const usery =userx;
+
+usery.age = 22;
+console.log(userx,usery);
+
+OUTPUT
+
+20
+script.js:9 20
+script.js:12 Infinity
+script.js:14 hello/0
+script.js:16 Infinity
+script.js:20 Infinity
+script.js:23 5
+script.js:27 10n 'bigint'
+script.js:30 number
+script.js:35 addition of two numbers 190 and 20 is 210
+script.js:38 addition of two numbers 190 and 20 is 210
+script.js:43 string concatenation: RobertDowney
+script.js:47 undefined
+script.js:50 null
+script.js:54 undefined
+script.js:58 college
+script.js:66 {name: 'jaga', age: 20, identification: 'positivity'}
+script.js:70 {name: 'jaga', age: 20, identification: 'positivity', profession: 'Director'}
+script.js:74 {name: 'jaga', age: 21, identification: 'positivity', profession: 'Director'}
+script.js:78 {name: 'jaga', identification: 'positivity', profession: 'Director'}
+script.js:86 {name: 'jaga', age: 21}
+script.js:89 (3) ['name', 'identification', 'profession']
+script.js:99 {name: 'jaga', age: 22} {name: 'jaga', age: 22}
